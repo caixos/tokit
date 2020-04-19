@@ -7,7 +7,7 @@ import (
 	"log"
 
 	"caixin.app/tokit/contract"
-	"caixin.app/tokit/servers/transports/protobuf"
+	"caixin.app/tokit/server/transports/protobuf"
 	"caixin.app/tokit/tools/idwork"
 	"google.golang.org/grpc"
 )

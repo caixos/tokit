@@ -2,7 +2,7 @@ package test
 
 import (
 	"caixin.app/tokit/contract"
-	"caixin.app/tokit/filters"
+	"caixin.app/tokit/filter"
 	"caixin.app/tokit/tools/idwork"
 	"errors"
 	"context"
@@ -29,9 +29,9 @@ func (s *TestStruct) Request(m map[string]interface{}) *TestStruct {
 	return s
 }
 func (s *TestStruct) Run() (contract.Response, error) {
-	e := filters.Chain(
-		&filters.ResponseEndpoint{},
-		&filters.CommEndpoint{Controller: s.controller},
+	e := filter.Chain(
+		&filter.ResponseEndpoint{},
+		&filter.CommEndpoint{Controller: s.controller},
 	)
 	request := contract.Request{
 		Id:   idwork.ID(),
