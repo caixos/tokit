@@ -1,6 +1,10 @@
 package config
 
-import "caixin.app/tokit/args"
+import (
+	"fmt"
+
+	"caixin.app/tokit/args"
+)
 
 type MySqlConfig struct {
 	Driver       string

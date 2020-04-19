@@ -5,6 +5,7 @@ import (
 	"caixin.app/tokit/constant"
 	"caixin.app/tokit/contract"
 	"caixin.app/tokit/logger"
+	"caixin.app/tokit/tools/convert"
 	"github.com/go-kit/kit/endpoint"
 	"github.com/sirupsen/logrus"
 	"context"

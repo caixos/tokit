@@ -1,6 +1,10 @@
 package client
 
-import "caixin.app/tokit/contract"
+import (
+	"fmt"
+
+	"caixin.app/tokit/contract"
+)
 
 // 为统一php模式而封装
 // micro -> service,  service ->route

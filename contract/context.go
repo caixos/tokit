@@ -1,10 +1,11 @@
 package contract
 
 import (
+	"context"
 	"strings"
 	"time"
-	"context"
 
+	"caixin.app/tokit/constant"
 )
 
 type Context struct {
@@ -170,7 +171,7 @@ func (c *Context) getValue(key string) (ret interface{}) {
 }
 
 func (c *Context) Request() interface{} {
-	return c.Get(constants.RequestDto)
+	return c.Get(constant.RequestDto)
 }
 
 //------私有

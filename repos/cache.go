@@ -1,5 +1,10 @@
 package repos
 
+import (
+	"encoding/json"
+	"caixin.app/tokit/cache"
+)
+
 func GetCache(key string, obj interface{}) error {
 	b, err := cache.Get(key)
 	if err != nil {

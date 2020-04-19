@@ -1,6 +1,10 @@
 package commands
 
 import (
+	"caixin.app/tokit/servers/commons"
+	"caixin.app/tokit/args"
+	"caixin.app/tokit/constant"
+	"caixin.app/tokit/contract"
 	"context"
 	"errors"
 
@@ -8,7 +12,7 @@ import (
 
 type Server struct {
 	handlers map[string]*commons.CommHandler
-	Logger   contracts.ILogger
+	Logger   contract.ILogger
 }
 
 func NewServer() *Server {
@@ -29,7 +33,7 @@ func (s *Server) Serve() error {
 		//调用服务
 		handler, isExist := s.handlers[args.Cmd]
 		if isExist == false {
-			return errors.New(constants.ErrRoute)
+			return errors.New(constant.ErrRoute)
 		}
 		ctx := context.Background()
 		response, err := handler.Handle(ctx, args.Args)

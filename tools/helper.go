@@ -1,7 +1,7 @@
 package tools
 
 import (
-	"github.com/apache/thrift/lib/go/test/tests"
+	"caixin.app/tokit/tools/test"
 	"net"
 )
 
@@ -27,7 +27,7 @@ func LocalIp() (string, error) {
 
 }
 
-func Test() *tests.TestStruct {
-	return tests.NewTest()
+func Test() *test.TestStruct {
+	return test.NewTest()
 }
 

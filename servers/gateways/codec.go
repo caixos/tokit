@@ -4,15 +4,15 @@ import (
 	"bytes"
 	"caixin.app/tokit/contract"
 	"caixin.app/tokit/tools/idwork"
+	"context"
 	"encoding/json"
+	"errors"
 	"io"
 	"io/ioutil"
 	"mime"
 	"net/http"
 	"net/url"
 	"strings"
-	"context"
-	"errors"
 )
 
 func decodeRequest(_ context.Context, r *http.Request) (req *contract.GateWayRequest, err error) {
@@ -102,7 +102,7 @@ func parsePostForm(r *http.Request) (vs url.Values, err error) {
 	return
 }
 
-func parseUrl(r *http.Request) *contracts.GateWayRequest {
+func parseUrl(r *http.Request) *contract.GateWayRequest {
 	var service, route, dest string
 	pathArray := strings.Split(r.URL.Path, "/")
 	if len(pathArray) <= 2 {
@@ -116,7 +116,7 @@ func parseUrl(r *http.Request) *contracts.GateWayRequest {
 		route = strings.Join(pathArray[2:], ".")
 		dest = "/" + strings.Join(pathArray[2:], "/")
 	}
-	return &contracts.GateWayRequest{
+	return &contract.GateWayRequest{
 		Dest:    dest,
 		Method:  r.Method,
 		Service: service,
