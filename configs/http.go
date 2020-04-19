@@ -7,7 +7,7 @@ type HttpConfig struct {
 
 func LoadHttpConfig() *HttpConfig {
 	config := &HttpConfig{
-		HttpHost: EnvString("servers.http_host", "127.0.0.1"),
+		HttpHost: EnvString("servers.http_host", "0.0.0.0"),
 		HttpPort: EnvString("servers.http_port", "8341"),
 	}
 	return config
