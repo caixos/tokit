@@ -109,29 +109,29 @@ main
 ~~~~
     //如果参数配置了registy,则自动进行consul的服务注册 grpc http 都可
 	//例如go run main.go -name=test_service  -registy=127.0.0.1:8500 -server=grpc
-	wego.Provider(&providers.ConsulRegistyProvider{})
+	tokit.Provider(&providers.ConsulRegistyProvider{})
     
     //这里注册自己的handler
-	wego.Provider(&provider.ExamProvider{})
+	tokit.Provider(&provider.ExamProvider{})
 	
 	//下面的server,根据启动args参数决定
-	wego.Router("grpc",&router.GrpcRouter{})
-	wego.Router("http",&router.HttpRouter{})
-	wego.Router("queue",&router.QueueRouter{})
-	wego.Router("command",&router.CommandRouter{})
-	wego.Router("websocket",&router.WebSocketRouter{})
-	wego.Router("timer",&router.TimerRouter{})
-	wego.Router("cron",&router.CronRouter{})
+	tokit.Router("grpc",&router.GrpcRouter{})
+	tokit.Router("http",&router.HttpRouter{})
+	tokit.Router("queue",&router.QueueRouter{})
+	tokit.Router("command",&router.CommandRouter{})
+	tokit.Router("websocket",&router.WebSocketRouter{})
+	tokit.Router("timer",&router.TimerRouter{})
+	tokit.Router("cron",&router.CronRouter{})
 	
 	//内置加载事件服务,无需路由,直接调用  handler
-    wego.Router("event", servers.NewEventCommServer())
+    tokit.Router("event", servers.NewEventCommServer())
 	
-	wego.Start()
+	tokit.Start()
 ~~~~
 ExamProvider
 ~~~~
-	wego.Handler("one", filters.Limit(&controller.OneController{}))
-	wego.Handler("two", filters.New(&controller.TwoController{}))
+	tokit.Handler("one", filters.Limit(&controller.OneController{}))
+	tokit.Handler("two", filters.New(&controller.TwoController{}))
 
 ~~~~
 
@@ -142,7 +142,7 @@ type OneController struct {
 }
 
 //swagger:route GET .....
-func (it *OneController) Handle(ctx contracts.Context) (interface{}, error) {
+func (it *OneController) Handle(ctx contract.Context) (interface{}, error) {
     
 	chain := services.Chain(
 		&service.OneService{},
@@ -172,25 +172,25 @@ type FirstResp struct {
 
 HttpRouter
 ~~~~
-	it.Get("/exam/one", wego.Handler("one"))
-	it.Get("/exam/two", wego.Handler("two"))
-	it.Post("/exam/auth", wego.Handler("auth"))
+	it.Get("/exam/one", tokit.Handler("one"))
+	it.Get("/exam/two", tokit.Handler("two"))
+	it.Post("/exam/auth", tokit.Handler("auth"))
 ~~~~
 CronRouter
 ~~~~
-	it.Route("*/5 * * * * *", wego.Handler("one"))
-	it.Route("*/2 * * * * *", wego.Handler("two"))
+	it.Route("*/5 * * * * *", tokit.Handler("one"))
+	it.Route("*/2 * * * * *", tokit.Handler("two"))
 ~~~~
 GrpcRouter
 ~~~~
-	it.Route("Two", wego.Handler("two"))
+	it.Route("Two", tokit.Handler("two"))
 ~~~~
 
 
 
 RedisService
 ~~~~
-func (it *RedisService)Handle(ctx contracts.Context) error  {
+func (it *RedisService)Handle(ctx contract.Context) error  {
 	client := clients.Redis() //从pool中获取一个链接
 	defer client.Close()   //延时释放链接,本方法执行完毕时释放
 	_, _ = client.Do("SET", "go_key", "value")
@@ -209,7 +209,7 @@ func (it *RedisService)Handle(ctx contracts.Context) error  {
 ~~~~
 SqlService
 ~~~~
-func (it *SqlService)Handle(ctx contracts.Context) error  {
+func (it *SqlService)Handle(ctx contract.Context) error  {
 	repo := &repository2.UserRepo{Context: ctx}
 	user := repo.FetchId("1189164474851006208")
 	ctx.Set("user",user)
@@ -230,7 +230,7 @@ github.com/astaxie/beego/validation
 type TestDto struct {
 	Name string `json:"name" valid:"Required;MinSize(1);MaxSize(5)"`
 	Age  int    `json:"age" valid:"Required"`
-	//Name   string `json:"name" valid:"Required;Match(/^wego.*/)"` // Name 不能为空并且以 wego 开头
+	//Name   string `json:"name" valid:"Required;Match(/^tokit.*/)"` // Name 不能为空并且以 tokit 开头
 	////有问题
 	//Age    string    `json:"age" valid:"Range(1, 140)"` // 1 <= Age <= 140，超出此范围即为不合法
 	//Email  string `json:"email" valid:"Email; MaxSize(100)"` // Email 字段需要符合邮箱格式，并且最大长度不能大于 100 个字符
