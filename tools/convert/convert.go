@@ -1,7 +1,7 @@
 package convert
 
 import (
-	"caixin.app/caixos/tokit/constant"
+	"caixin.app/caixos/tokit/constants"
 	"caixin.app/caixos/tokit/validations"
 	"encoding/json"
 	"github.com/mitchellh/mapstructure"
@@ -28,7 +28,7 @@ func Map2Struct(req, obj interface{}) error {
 	// 注意 不可随意增加_,json中可以有_
 	request, ok := req.(map[string]interface{})
 	if ok == false {
-		return errors.New(constant.ErrConvert)
+		return errors.New(constants.ErrConvert)
 	}
 	for k, v := range request {
 		if strings.Contains(k, "_") {
@@ -38,7 +38,7 @@ func Map2Struct(req, obj interface{}) error {
 	}
 	err := mapstructure.WeakDecode(request, obj)
 	if err != nil {
-		return errors.New(constant.ErrConvert)
+		return errors.New(constants.ErrConvert)
 	}
 	err = validations.Valid(obj)
 	if err != nil {

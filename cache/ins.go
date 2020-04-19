@@ -1,8 +1,8 @@
 package cache
 
 import (
-	"caixin.app/caixos/tokit/config"
-	"caixin.app/caixos/tokit/constant"
+	"caixin.app/caixos/tokit/configs"
+	"caixin.app/caixos/tokit/constants"
 	"github.com/coocood/freecache"
 	"encoding/json"
 	"runtime/debug"
@@ -21,7 +21,7 @@ func GetIns() *freecache.Cache {
 }
 
 func initCache() *freecache.Cache {
-	config := config.LoadCacheConfig()
+	config := configs.LoadCacheConfig()
 	if config.Size != 0 {
 		c := freecache.NewCache(config.Size)
 		//根据cache的大小进行设置
@@ -33,7 +33,7 @@ func initCache() *freecache.Cache {
 
 func Set(key string, value interface{}, exp int) error {
 	if GetIns() == nil {
-		return errors.New(constant.ErrCacheInit)
+		return errors.New(constants.ErrCacheInit)
 	}
 
 	k := []byte(key)
@@ -49,7 +49,7 @@ func Set(key string, value interface{}, exp int) error {
 }
 func Get(key string) ([]byte, error) {
 	if GetIns() == nil {
-		return nil, errors.New(constant.ErrCacheInit)
+		return nil, errors.New(constants.ErrCacheInit)
 	}
 	k := []byte(key)
 	return GetIns().Get(k)

@@ -2,7 +2,7 @@ package idwork
 
 import (
 	"errors"
-	"caixin.app/caixos/tokit/constant"
+	"caixin.app/caixos/tokit/constants"
 	"strconv"
 	"sync"
 	"time"
@@ -54,14 +54,14 @@ func newNode(server int64) (*snowflake, error) {
 	it.timeShift = serverBits + sequenceBits
 
 	if it.server < 0 || it.server > it.serverMax {
-		return nil, errors.New("server number must be between 0 and " + strconv.FormatInt(it.serverMax, 10))
+		return nil, errors.New("servers number must be between 0 and " + strconv.FormatInt(it.serverMax, 10))
 	}
 
 	return &it, nil
 }
 func (s *snowflake) epochGen() int64 {
 	start := "2010-01-01 00:00:00"
-	layout := constant.YmdHis
+	layout := constants.YmdHis
 	loc, _ := time.LoadLocation("Local")
 	theTime, _ := time.ParseInLocation(layout, start, loc)
 	return theTime.UnixNano() / 1000000

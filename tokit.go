@@ -2,8 +2,8 @@ package tokit
 
 import (
 	"caixin.app/caixos/tokit/args"
-	"caixin.app/caixos/tokit/contract"
-	"caixin.app/caixos/tokit/logger"
+	"caixin.app/caixos/tokit/contracts"
+	"caixin.app/caixos/tokit/loggers"
 	"fmt"
 
 	"github.com/go-kit/kit/endpoint"
@@ -18,10 +18,10 @@ import (
 type Application struct {
 	Status bool
 	//必须初始化
-	Service  map[string]contract.IService
+	Service  map[string]contracts.IService
 	Consul   map[string]*consul.Registrar
 	Handlers map[string]endpoint.Endpoint
-	Routers  map[string]contract.IRouter
+	Routers  map[string]contracts.IRouter
 	tomls    map[string]*viper.Viper
 }
 
@@ -31,15 +31,15 @@ var App *Application
 func init() {
 	App = &Application{
 		Status:   true,
-		Service:  make(map[string]contract.IService),
+		Service:  make(map[string]contracts.IService),
 		Consul:   make(map[string]*consul.Registrar),
 		Handlers: make(map[string]endpoint.Endpoint),
-		Routers:  make(map[string]contract.IRouter),
+		Routers:  make(map[string]contracts.IRouter),
 		tomls:    make(map[string]*viper.Viper),
 	}
 }
 
-func Provider(p contract.IProvider) {
+func Provider(p contracts.IProvider) {
 	p.Boot()
 	p.Register()
 }
@@ -78,7 +78,7 @@ func Toml(name string, fileName ...string) *viper.Viper {
 	}
 	return nil
 }
-func Service(name string, service ...contract.IService) contract.IService {
+func Service(name string, service ...contracts.IService) contracts.IService {
 	if service == nil {
 		ret, exist := App.Service[name]
 		if exist {
@@ -90,7 +90,7 @@ func Service(name string, service ...contract.IService) contract.IService {
 	return nil
 }
 
-func Router(name string, server contract.IRouter) {
+func Router(name string, server contracts.IRouter) {
 	server.Boot()
 	server.Load()
 	server.Register()
@@ -100,7 +100,7 @@ func Router(name string, server contract.IRouter) {
 //启动server
 func Start() {
 	servers := strings.Split(args.Server, ",")
-	routers := make(map[string]contract.IRouter)
+	routers := make(map[string]contracts.IRouter)
 	for _, s := range servers {
 		if ss, exist := App.Routers[strings.Trim(s, " ")]; exist == true {
 			routers[s] = ss
@@ -109,7 +109,7 @@ func Start() {
 	errChans := make(map[string]chan error)
 	for key, router := range routers {
 		errChans[key] = make(chan error)
-		go func(errChan chan error, server contract.IRouter) {
+		go func(errChan chan error, server contracts.IRouter) {
 			errChan <- server.Start()
 		}(errChans[key], router)
 		go func(errChan chan error) {
@@ -119,7 +119,7 @@ func Start() {
 		}(errChans[key])
 	}
 	for _, errChan := range errChans {
-		logger.GetLog().Info(<-errChan)
+		loggers.GetLog().Info(<-errChan)
 	}
 	//关闭各种路由服务
 	for _, server := range routers {

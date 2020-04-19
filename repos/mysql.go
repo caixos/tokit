@@ -2,8 +2,8 @@ package repos
 
 import (
 	"errors"
-	"caixin.app/caixos/tokit/constant"
-	"caixin.app/caixos/tokit/client/mysql"
+	"caixin.app/caixos/tokit/constants"
+	"caixin.app/caixos/tokit/clients/mysql"
 	"github.com/go-xorm/xorm"
 	"xorm.io/builder"
 )
@@ -18,7 +18,7 @@ func First(obj interface{}) error {
 		return err
 	}
 	if !has {
-		return errors.New(constant.ErrNotExist)
+		return errors.New(constants.ErrNotExist)
 	}
 	return nil
 }
@@ -59,7 +59,7 @@ func FetchOne(b *builder.Builder, bean interface{}) error {
 		return err
 	}
 	if !has {
-		return errors.New(constant.ErrNotExist)
+		return errors.New(constants.ErrNotExist)
 	}
 	return nil
 }

@@ -21,8 +21,8 @@ func init() {
 	flag.StringVar(&Mode, "mode", "dev", "开发模式")
 	flag.StringVar(&Registy, "registy", "", "consul服务注册中心")
 
-	flag.StringVar(&Server, "server", "http,event", "需要启动的服务器")
-	flag.StringVar(&Config, "config", "env,consul", "顺序1环境配置")
+	flag.StringVar(&Server, "servers", "http,event", "需要启动的服务器")
+	flag.StringVar(&Config, "configs", "env,consul", "顺序1环境配置")
 
 	flag.StringVar(&Cmd, "cmd", "cmd", "cli命令")
 	flag.StringVar(&Args, "args", "{}", "json参数")

@@ -1,8 +1,8 @@
 package jwt
 
 import (
-	"caixin.app/caixos/tokit/config"
-	"caixin.app/caixos/tokit/constant"
+	"caixin.app/caixos/tokit/configs"
+	"caixin.app/caixos/tokit/constants"
 	"caixin.app/caixos/tokit/tools/util"
 	"encoding/base64"
 	"encoding/json"
@@ -14,14 +14,14 @@ import (
 
 type Token struct {
 	Claims *Claims
-	config *config.TokenConfig
+	config *configs.TokenConfig
 }
 
 func New() *Token {
 	token := &Token{
 		Claims: &Claims{},
 	}
-	token.config = config.LoadTokenConfig()
+	token.config = configs.LoadTokenConfig()
 	return token
 }
 
@@ -56,7 +56,7 @@ func (s *Token) GetToken() string {
 func (s *Token) VerifyToken(sign string) (*Claims, error) {
 	m := strings.Split(sign, ".")
 	if len(m) < 1 {
-		return nil, errors.New(constant.ErrTokenFmt)
+		return nil, errors.New(constants.ErrTokenFmt)
 	}
 	jsonClaim, decodeErr := base64.StdEncoding.DecodeString(m[0])
 	if decodeErr != nil {
@@ -69,11 +69,11 @@ func (s *Token) VerifyToken(sign string) (*Claims, error) {
 	}
 
 	if claims.Exp < time.Now().Unix() {
-		return nil, errors.New(constant.ErrTokenExp)
+		return nil, errors.New(constants.ErrTokenExp)
 	}
 
 	if m[1] != s.getSign(claims) {
-		return nil, errors.New(constant.ErrTokenSign)
+		return nil, errors.New(constants.ErrTokenSign)
 	}
 	return claims, nil
 }
