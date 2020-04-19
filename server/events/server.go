@@ -1,8 +1,8 @@
 package events
 
 import (
-	"caixin.app/tokit/contract"
-	"caixin.app/tokit/tools/idwork"
+	"caixin.app/caixos/tokit/contract"
+	"caixin.app/caixos/tokit/tools/idwork"
 	"github.com/go-kit/kit/endpoint"
 	"runtime"
 	"sync"

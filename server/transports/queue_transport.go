@@ -1,8 +1,8 @@
 package transports
 
 import (
-	"caixin.app/tokit/server/common"
-	"caixin.app/tokit/server/transports/codecs"
+	"caixin.app/caixos/tokit/server/common"
+	"caixin.app/caixos/tokit/server/transports/codecs"
 	"github.com/go-kit/kit/endpoint"
 )
 

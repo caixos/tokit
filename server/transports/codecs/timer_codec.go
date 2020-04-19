@@ -1,7 +1,7 @@
 package codecs
 
 import (
-	"caixin.app/tokit/contract"
+	"caixin.app/caixos/tokit/contract"
 	"context"
 )
 

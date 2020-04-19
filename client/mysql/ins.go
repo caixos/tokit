@@ -1,7 +1,7 @@
 package mysql
 
 import (
-	"caixin.app/tokit/config"
+	"caixin.app/caixos/tokit/config"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/go-xorm/xorm"
 	"sync"

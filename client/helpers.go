@@ -1,8 +1,8 @@
 package client
 
 import (
-	"caixin.app/tokit/client/mysql"
-	"caixin.app/tokit/client/redis"
+	"caixin.app/caixos/tokit/client/mysql"
+	"caixin.app/caixos/tokit/client/redis"
 	"github.com/go-xorm/xorm"
 	redigo "github.com/gomodule/redigo/redis"
 )

@@ -1,9 +1,9 @@
 package logger
 
 import (
-	"caixin.app/tokit/args"
-	"caixin.app/tokit/config"
-	"caixin.app/tokit/constant"
+	"caixin.app/caixos/tokit/args"
+	"caixin.app/caixos/tokit/config"
+	"caixin.app/caixos/tokit/constant"
 	"github.com/sirupsen/logrus"
 	rotatelogs "github.com/lestrrat/go-file-rotatelogs"
 	"github.com/rifflock/lfshook"

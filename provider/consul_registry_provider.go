@@ -1,10 +1,10 @@
 package provider
 
 import (
-	"caixin.app/tokit"
-	"caixin.app/tokit/client"
-	"caixin.app/tokit/config"
-	"caixin.app/tokit/args"
+	"caixin.app/caixos/tokit"
+	"caixin.app/caixos/tokit/client"
+	"caixin.app/caixos/tokit/config"
+	"caixin.app/caixos/tokit/args"
 
 	"strings"
 

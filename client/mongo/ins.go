@@ -2,7 +2,7 @@ package mongo
 
 import (
 	"context"
-	"caixin.app/tokit/config"
+	"caixin.app/caixos/tokit/config"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 	"go.mongodb.org/mongo-driver/mongo/readconcern"

@@ -1,10 +1,10 @@
 package filter
 
 import (
-	"caixin.app/tokit/constant"
-	"caixin.app/tokit/contract"
-	"caixin.app/tokit/tools/convert"
-	"caixin.app/tokit/tools/jwt"
+	"caixin.app/caixos/tokit/constant"
+	"caixin.app/caixos/tokit/contract"
+	"caixin.app/caixos/tokit/tools/convert"
+	"caixin.app/caixos/tokit/tools/jwt"
 	"github.com/go-kit/kit/endpoint"
 	"context"
 	"errors"

@@ -6,9 +6,9 @@ import (
 	"errors"
 	"log"
 
-	"caixin.app/tokit/contract"
-	"caixin.app/tokit/server/transports/protobuf"
-	"caixin.app/tokit/tools/idwork"
+	"caixin.app/caixos/tokit/contract"
+	"caixin.app/caixos/tokit/server/transports/protobuf"
+	"caixin.app/caixos/tokit/tools/idwork"
 	"google.golang.org/grpc"
 )
 

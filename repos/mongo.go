@@ -1,8 +1,8 @@
 package repos
 
 import (
-	mgo "caixin.app/tokit/client/mongo"
-	"caixin.app/tokit/config"
+	mgo "caixin.app/caixos/tokit/client/mongo"
+	"caixin.app/caixos/tokit/config"
 	"go.mongodb.org/mongo-driver/mongo"
 )
 

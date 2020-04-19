@@ -1,6 +1,6 @@
 package events
 
-import "caixin.app/tokit/contract"
+import "caixin.app/caixos/tokit/contract"
 
 func addEvent(event *contract.Payload) {
 	go func() {

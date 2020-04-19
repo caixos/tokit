@@ -1,11 +1,11 @@
 package gateways
 
 import (
-	"caixin.app/tokit/client"
-	"caixin.app/tokit/config"
-	"caixin.app/tokit/constant"
-	"caixin.app/tokit/contract"
-	"caixin.app/tokit/server/events"
+	"caixin.app/caixos/tokit/client"
+	"caixin.app/caixos/tokit/config"
+	"caixin.app/caixos/tokit/constant"
+	"caixin.app/caixos/tokit/contract"
+	"caixin.app/caixos/tokit/server/events"
 	"github.com/go-kit/kit/endpoint"
 	"net/http"
 	"net/http/httputil"

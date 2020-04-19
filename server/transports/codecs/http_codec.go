@@ -1,8 +1,8 @@
 package codecs
 
 import (
-	"caixin.app/tokit/contract"
-	"caixin.app/tokit/tools/idwork"
+	"caixin.app/caixos/tokit/contract"
+	"caixin.app/caixos/tokit/tools/idwork"
 	"encoding/json"
 	"net/http"
 	"strings"

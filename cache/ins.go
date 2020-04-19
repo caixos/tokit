@@ -1,8 +1,8 @@
 package cache
 
 import (
-	"caixin.app/tokit/config"
-	"caixin.app/tokit/constant"
+	"caixin.app/caixos/tokit/config"
+	"caixin.app/caixos/tokit/constant"
 	"github.com/coocood/freecache"
 	"encoding/json"
 	"runtime/debug"

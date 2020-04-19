@@ -1,8 +1,8 @@
 package convert
 
 import (
-	"caixin.app/tokit/constant"
-	"caixin.app/tokit/validations"
+	"caixin.app/caixos/tokit/constant"
+	"caixin.app/caixos/tokit/validations"
 	"encoding/json"
 	"github.com/mitchellh/mapstructure"
 	"net/url"

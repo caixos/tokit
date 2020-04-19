@@ -1,7 +1,7 @@
 package tools
 
 import (
-	"caixin.app/tokit/tools/test"
+	"caixin.app/caixos/tokit/tools/test"
 	"net"
 )
 

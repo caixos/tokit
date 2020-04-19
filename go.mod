@@ -1,4 +1,4 @@
-module caixin.app/tokit
+module caixin.app/caixos/tokit
 
 go 1.13
 

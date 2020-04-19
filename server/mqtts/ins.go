@@ -1,8 +1,8 @@
 package mqtts
 
 import (
-	"caixin.app/tokit/config"
-	"caixin.app/tokit/tools/idwork"
+	"caixin.app/caixos/tokit/config"
+	"caixin.app/caixos/tokit/tools/idwork"
 	mqtt "github.com/eclipse/paho.mqtt.golang"
 	"sync"
 )
