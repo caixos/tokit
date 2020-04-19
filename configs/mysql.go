@@ -3,7 +3,7 @@ package configs
 import (
 	"fmt"
 
-	"caixin.app/caixos/tokit/args"
+	"github.com/caixos/tokit/args"
 )
 
 type MySqlConfig struct {

@@ -1,9 +1,9 @@
 package codecs
 
 import (
-	"caixin.app/caixos/tokit/constants"
-	"caixin.app/caixos/tokit/contracts"
-	"caixin.app/caixos/tokit/tools/idwork"
+	"github.com/caixos/tokit/constants"
+	"github.com/caixos/tokit/contracts"
+	"github.com/caixos/tokit/tools/idwork"
 	"encoding/json"
 	"errors"
 	"context"

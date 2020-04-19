@@ -1,7 +1,7 @@
 package filters
 
 import (
-	"caixin.app/caixos/tokit/contracts"
+	"github.com/caixos/tokit/contracts"
 	"github.com/go-kit/kit/endpoint"
 )
 

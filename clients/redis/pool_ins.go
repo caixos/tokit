@@ -2,7 +2,7 @@ package redis
 
 
 import (
-	"caixin.app/caixos/tokit/configs"
+	"github.com/caixos/tokit/configs"
 	"fmt"
 	"github.com/gomodule/redigo/redis"
 	"sync"

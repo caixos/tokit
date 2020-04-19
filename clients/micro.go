@@ -3,7 +3,7 @@ package clients
 import (
 	"fmt"
 
-	"caixin.app/caixos/tokit/contracts"
+	"github.com/caixos/tokit/contracts"
 )
 
 // 为统一php模式而封装

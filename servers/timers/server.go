@@ -1,9 +1,9 @@
 package timers
 
 import (
-	"caixin.app/caixos/tokit/contracts"
-	"caixin.app/caixos/tokit/servers/commons"
-	"caixin.app/caixos/tokit/tools/idwork"
+	"github.com/caixos/tokit/contracts"
+	"github.com/caixos/tokit/servers/commons"
+	"github.com/caixos/tokit/tools/idwork"
 	"time"
 	"context"
 )

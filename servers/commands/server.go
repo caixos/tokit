@@ -1,10 +1,10 @@
 package commands
 
 import (
-	"caixin.app/caixos/tokit/servers/commons"
-	"caixin.app/caixos/tokit/args"
-	"caixin.app/caixos/tokit/constants"
-	"caixin.app/caixos/tokit/contracts"
+	"github.com/caixos/tokit/servers/commons"
+	"github.com/caixos/tokit/args"
+	"github.com/caixos/tokit/constants"
+	"github.com/caixos/tokit/contracts"
 	"context"
 	"errors"
 

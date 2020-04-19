@@ -2,9 +2,9 @@ package servers
 
 import (
 	"github.com/go-kit/kit/endpoint"
-	"caixin.app/caixos/tokit/servers/gateways"
-	"caixin.app/caixos/tokit/filters"
-	"caixin.app/caixos/tokit/loggers"
+	"github.com/caixos/tokit/servers/gateways"
+	"github.com/caixos/tokit/filters"
+	"github.com/caixos/tokit/loggers"
 )
 
 type GateWayCommServer struct {

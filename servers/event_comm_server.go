@@ -1,10 +1,10 @@
 package servers
 
 import (
-	"caixin.app/caixos/tokit"
-	"caixin.app/caixos/tokit/configs"
-	"caixin.app/caixos/tokit/loggers"
-	"caixin.app/caixos/tokit/servers/events"
+	"github.com/caixos/tokit"
+	"github.com/caixos/tokit/configs"
+	"github.com/caixos/tokit/loggers"
+	"github.com/caixos/tokit/servers/events"
 	"time"
 )
 

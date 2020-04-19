@@ -2,10 +2,10 @@ package servers
 
 import (
 	"github.com/go-kit/kit/endpoint"
-	"caixin.app/caixos/tokit/loggers"
-	"caixin.app/caixos/tokit/servers/commons"
-	"caixin.app/caixos/tokit/servers/timers"
-	"caixin.app/caixos/tokit/servers/transports"
+	"github.com/caixos/tokit/loggers"
+	"github.com/caixos/tokit/servers/commons"
+	"github.com/caixos/tokit/servers/timers"
+	"github.com/caixos/tokit/servers/transports"
 )
 
 /**

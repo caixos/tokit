@@ -1,7 +1,7 @@
 package mysql
 
 import (
-	"caixin.app/caixos/tokit/constants"
+	"github.com/caixos/tokit/constants"
 	"errors"
 )
 

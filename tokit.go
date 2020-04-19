@@ -1,9 +1,9 @@
 package tokit
 
 import (
-	"caixin.app/caixos/tokit/args"
-	"caixin.app/caixos/tokit/contracts"
-	"caixin.app/caixos/tokit/loggers"
+	"github.com/caixos/tokit/args"
+	"github.com/caixos/tokit/contracts"
+	"github.com/caixos/tokit/loggers"
 	"fmt"
 
 	"github.com/go-kit/kit/endpoint"

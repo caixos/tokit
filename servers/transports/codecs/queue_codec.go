@@ -1,8 +1,8 @@
 package codecs
 
 import (
-	"caixin.app/caixos/tokit/contracts"
-	"caixin.app/caixos/tokit/tools/idwork"
+	"github.com/caixos/tokit/contracts"
+	"github.com/caixos/tokit/tools/idwork"
 	"context"
 )
 

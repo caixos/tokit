@@ -3,7 +3,7 @@ package transports
 import (
 	GrpcTransport "github.com/go-kit/kit/transport/grpc"
 	"github.com/go-kit/kit/endpoint"
-	"caixin.app/caixos/tokit/servers/transports/codecs"
+	"github.com/caixos/tokit/servers/transports/codecs"
 )
 
 func NewGRPC(endpoint endpoint.Endpoint) *GrpcTransport.Server {

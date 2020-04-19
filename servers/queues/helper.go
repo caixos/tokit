@@ -1,8 +1,8 @@
 package queues
 
 import (
-	"caixin.app/caixos/tokit/configs"
-	"caixin.app/caixos/tokit/clients"
+	"github.com/caixos/tokit/configs"
+	"github.com/caixos/tokit/clients"
 )
 
 func Fire(name string, router string, params map[string]interface{}) error {

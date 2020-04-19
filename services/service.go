@@ -2,7 +2,7 @@ package services
 
 import (
 	"context"
-	"caixin.app/caixos/tokit/contracts"
+	"github.com/caixos/tokit/contracts"
 )
 
 func New(service contracts.IService) *commonService {

@@ -2,7 +2,7 @@ package repos
 
 import (
 	"encoding/json"
-	"caixin.app/caixos/tokit/cache"
+	"github.com/caixos/tokit/cache"
 )
 
 func GetCache(key string, obj interface{}) error {

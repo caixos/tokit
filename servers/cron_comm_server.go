@@ -2,9 +2,9 @@ package servers
 
 import (
 	"github.com/go-kit/kit/endpoint"
-	"caixin.app/caixos/tokit/servers/cronjobs"
-	"caixin.app/caixos/tokit/servers/commons"
-	"caixin.app/caixos/tokit/servers/transports"
+	"github.com/caixos/tokit/servers/cronjobs"
+	"github.com/caixos/tokit/servers/commons"
+	"github.com/caixos/tokit/servers/transports"
 )
 
 type CronCommServer struct {

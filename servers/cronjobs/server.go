@@ -1,7 +1,7 @@
 package cronjobs
 
 import (
-	"caixin.app/caixos/tokit/servers/commons"
+	"github.com/caixos/tokit/servers/commons"
 	"github.com/robfig/cron/v3"
 	"time"
 )

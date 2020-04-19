@@ -2,8 +2,8 @@ package queues
 
 import (
 	"bytes"
-	"caixin.app/caixos/tokit/contracts"
-	"caixin.app/caixos/tokit/servers/commons"
+	"github.com/caixos/tokit/contracts"
+	"github.com/caixos/tokit/servers/commons"
 	"encoding/json"
 	"github.com/gomodule/redigo/redis"
 	"time"

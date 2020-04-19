@@ -1,8 +1,8 @@
 package clients
 
 import (
-	"caixin.app/caixos/tokit/contracts"
-	"caixin.app/caixos/tokit/tools/convert"
+	"github.com/caixos/tokit/contracts"
+	"github.com/caixos/tokit/tools/convert"
 	"encoding/json"
 	"io/ioutil"
 	"net/http"

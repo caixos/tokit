@@ -1,9 +1,9 @@
 package codecs
 
 import (
-	"caixin.app/caixos/tokit/contracts"
+	"github.com/caixos/tokit/contracts"
 	"context"
-	"caixin.app/caixos/tokit/tools/idwork"
+	"github.com/caixos/tokit/tools/idwork"
 )
 
 func WebSocketDecodeRequest(ctx context.Context, req interface{}) (interface{}, error) {

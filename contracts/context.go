@@ -5,7 +5,7 @@ import (
 	"strings"
 	"time"
 
-	"caixin.app/caixos/tokit/constants"
+	"github.com/caixos/tokit/constants"
 )
 
 type Context struct {

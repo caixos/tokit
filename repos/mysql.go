@@ -2,8 +2,8 @@ package repos
 
 import (
 	"errors"
-	"caixin.app/caixos/tokit/constants"
-	"caixin.app/caixos/tokit/clients/mysql"
+	"github.com/caixos/tokit/constants"
+	"github.com/caixos/tokit/clients/mysql"
 	"github.com/go-xorm/xorm"
 	"xorm.io/builder"
 )

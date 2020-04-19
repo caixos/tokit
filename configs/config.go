@@ -1,8 +1,8 @@
 package configs
 
 import (
-	"caixin.app/caixos/tokit/args"
-	"caixin.app/caixos/tokit/constants"
+	"github.com/caixos/tokit/args"
+	"github.com/caixos/tokit/constants"
 	"github.com/spf13/viper"
 	"strings"
 	"errors"

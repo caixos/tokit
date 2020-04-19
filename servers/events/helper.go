@@ -1,6 +1,6 @@
 package events
 
-import "caixin.app/caixos/tokit/contracts"
+import "github.com/caixos/tokit/contracts"
 
 func Fire(payload *contracts.Payload) {
 	//发送事件需要判断是否有处理器,否则不处理

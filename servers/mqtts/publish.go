@@ -1,8 +1,8 @@
 package mqtts
 
 import (
-	"caixin.app/caixos/tokit/configs"
-	"caixin.app/caixos/tokit/constants"
+	"github.com/caixos/tokit/configs"
+	"github.com/caixos/tokit/constants"
 	"encoding/json"
 	"errors"
 )

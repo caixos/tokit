@@ -1,9 +1,9 @@
 package jwt
 
 import (
-	"caixin.app/caixos/tokit/configs"
-	"caixin.app/caixos/tokit/constants"
-	"caixin.app/caixos/tokit/tools/util"
+	"github.com/caixos/tokit/configs"
+	"github.com/caixos/tokit/constants"
+	"github.com/caixos/tokit/tools/util"
 	"encoding/base64"
 	"encoding/json"
 	"strconv"

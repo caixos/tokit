@@ -1,10 +1,10 @@
 package clients
 
 import (
-	"caixin.app/caixos/tokit/args"
-	"caixin.app/caixos/tokit/cache"
-	"caixin.app/caixos/tokit/loggers"
-	"caixin.app/caixos/tokit/tools/idwork"
+	"github.com/caixos/tokit/args"
+	"github.com/caixos/tokit/cache"
+	"github.com/caixos/tokit/loggers"
+	"github.com/caixos/tokit/tools/idwork"
 	"encoding/json"
 	"github.com/go-kit/kit/sd/consul"
 	"github.com/hashicorp/consul/api"

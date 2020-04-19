@@ -2,9 +2,9 @@ package codecs
 
 import (
 	"context"
-	"caixin.app/caixos/tokit/contracts"
+	"github.com/caixos/tokit/contracts"
 	"encoding/json"
-	protobuf2 "caixin.app/caixos/tokit/servers/transports/protobuf"
+	protobuf2 "github.com/caixos/tokit/servers/transports/protobuf"
 )
 
 // TCP请求数据解码函数

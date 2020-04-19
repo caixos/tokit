@@ -2,10 +2,10 @@ package websockets
 
 import (
 	"github.com/gorilla/websocket"
-	"caixin.app/caixos/tokit/configs"
-	"caixin.app/caixos/tokit/constants"
-	"caixin.app/caixos/tokit/contracts"
-	"caixin.app/caixos/tokit/servers/commons"
+	"github.com/caixos/tokit/configs"
+	"github.com/caixos/tokit/constants"
+	"github.com/caixos/tokit/contracts"
+	"github.com/caixos/tokit/servers/commons"
 	"net/http"
 	"encoding/json"
 	"context"

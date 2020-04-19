@@ -1,13 +1,13 @@
 package servers
 
 import (
-	"caixin.app/caixos/tokit"
-	"caixin.app/caixos/tokit/configs"
-	"caixin.app/caixos/tokit/contracts"
-	"caixin.app/caixos/tokit/filters"
-	"caixin.app/caixos/tokit/loggers"
-	"caixin.app/caixos/tokit/servers/transports"
-	"caixin.app/caixos/tokit/servers/transports/codecs"
+	"github.com/caixos/tokit"
+	"github.com/caixos/tokit/configs"
+	"github.com/caixos/tokit/contracts"
+	"github.com/caixos/tokit/filters"
+	"github.com/caixos/tokit/loggers"
+	"github.com/caixos/tokit/servers/transports"
+	"github.com/caixos/tokit/servers/transports/codecs"
 	"github.com/go-kit/kit/endpoint"
 	"github.com/gorilla/mux"
 	"net/http"

@@ -2,7 +2,7 @@ package idwork
 
 import (
 	"errors"
-	"caixin.app/caixos/tokit/constants"
+	"github.com/caixos/tokit/constants"
 	"strconv"
 	"sync"
 	"time"
