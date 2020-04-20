@@ -1,5 +1,8 @@
 // protoc --proto_path=. --go_out=plugins=grpc:. message.proto
 syntax = "proto3";
+
+option go_package = ".;protobuf";
+
 package protobuf;
 
 service Service{
