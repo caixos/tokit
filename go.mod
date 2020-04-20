@@ -26,6 +26,6 @@ require (
 	github.com/spf13/viper v1.6.3
 	github.com/tebeka/strftime v0.1.4 // indirect
 	go.mongodb.org/mongo-driver v1.3.2
-	google.golang.org/grpc v1.26.0
+	google.golang.org/grpc v1.24.0
 	xorm.io/builder v0.3.6
 )
